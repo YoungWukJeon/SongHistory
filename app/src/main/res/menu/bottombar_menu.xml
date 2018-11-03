@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/view_history_menu"
+        android:title="View History"
+        android:icon="@drawable/ic_history_black_48dp"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/add_history_menu"
+        android:title="Add History"
+        android:icon="@drawable/ic_add_black_48dp"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/my_info_menu"
+        android:title="내 정보"
+        android:icon="@drawable/ic_history_black_48dp"
+        app:showAsAction="ifRoom"/>
+
+    <!--android:icon="@drawable/ic_baseline_search_24px"-->
+
+</menu>

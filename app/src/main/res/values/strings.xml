@@ -1,3 +1,80 @@
 <resources>
     <string name="app_name">SongHistory</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="genre_list">
+        <item>선택</item>
+        <item>Ballad</item>
+        <item>R&amp;B</item>
+        <item>Rock Ballad</item>
+        <item>Rock</item>
+        <item>Musical</item>
+        <item>Pop</item>
+        <item>Dance</item>
+        <item>Trot</item>
+        <item>Jazz</item>
+        <item>Blues</item>
+    </string-array>
+
+    <string-array name="octave_list">
+        <item>선택</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="note_list">
+        <item>선택</item>
+        <item>A</item>
+        <item>A#</item>
+        <item>B</item>
+        <item>C</item>
+        <item>C#</item>
+        <item>D</item>
+        <item>D#</item>
+        <item>E</item>
+        <item>F</item>
+        <item>F#</item>
+        <item>G</item>
+        <item>G#</item>
+    </string-array>
+
+    <string-array name="gender_list">
+        <item>선택</item>
+        <item>남</item>
+        <item>여</item>
+        <item>혼성</item>
+    </string-array>
+
+    <string-array name="change_list">
+        <item>선택</item>
+        <item>-6</item>
+        <item>-5</item>
+        <item>-4</item>
+        <item>-3</item>
+        <item>-2</item>
+        <item>-1</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="satisfaction_list">
+        <item>선택</item>
+        <item>0</item>
+        <item>20</item>
+        <item>40</item>
+        <item>60</item>
+        <item>80</item>
+        <item>100</item>
+    </string-array>satisfaction
 </resources>

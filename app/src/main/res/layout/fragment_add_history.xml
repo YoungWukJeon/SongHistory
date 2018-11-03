@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Add History"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="번호"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/no_editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:inputType="number"
+                    android:padding="2.5dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="제목"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border3"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:padding="2.5dp"
+                    android:id="@+id/title_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="가수"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border3"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:padding="2.5dp"
+                    android:id="@+id/singer_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="장르"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/genre_spinner">
+
+                </Spinner>
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/border3"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:inputType="text"-->
+                    <!--android:padding="2.5dp"-->
+                    <!--android:id="@+id/genre_editText"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="최고음"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/octave_spinner">
+
+                </Spinner>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/note_spinner">
+
+                </Spinner>
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/border3"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:inputType="text"-->
+                    <!--android:padding="2.5dp"-->
+                    <!--android:id="@+id/max_note_editText"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:text="키변조"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/gender_spinner">
+
+                </Spinner>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/change_spinner">
+
+                </Spinner>
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/border3"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:padding="2.5dp"-->
+                    <!--android:id="@+id/pitch_change_editText"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:text="날짜"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:textSize="20dp"
+                    android:inputType="date"
+                    android:padding="2.5dp"
+                    android:id="@+id/date_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="만족도"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:id="@+id/satisfaction_spinner">
+
+                </Spinner>
+
+                <!--<EditText-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textColor="@android:color/black"-->
+                    <!--android:textStyle="bold"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/border3"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:inputType="date"-->
+                    <!--android:padding="2.5dp"-->
+                    <!--android:id="@+id/satisfaction_editText"/>-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="기타"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border3"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    android:padding="2.5dp"
+                    android:id="@+id/etc_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Add"
+                    android:id="@+id/add_btn"
+                    android:focusable="false"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Reset"
+                    android:id="@+id/reset_btn"
+                    android:focusable="false"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
