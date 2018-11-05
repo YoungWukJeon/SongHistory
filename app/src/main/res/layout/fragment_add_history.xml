@@ -52,7 +52,9 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:inputType="number"
-                    android:padding="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:textColor="@android:color/black"
                     android:textSize="20dp"
                     android:textStyle="bold"/>
@@ -85,7 +87,9 @@
                     android:background="@drawable/border3"
                     android:textStyle="bold"
                     android:inputType="text"
-                    android:padding="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:id="@+id/title_editText"/>
 
             </LinearLayout>
@@ -116,8 +120,40 @@
                     android:background="@drawable/border3"
                     android:textStyle="bold"
                     android:inputType="text"
-                    android:padding="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:id="@+id/singer_editText"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="성별"
+                    android:textColor="@android:color/black"
+                    android:background="@drawable/border2"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
+
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border3"
+                    android:padding="2.5dp"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/gender_spinner">
+
+                </Spinner>
 
             </LinearLayout>
 
@@ -144,21 +180,10 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:padding="2.5dp"
+                    android:spinnerMode="dialog"
                     android:id="@+id/genre_spinner">
 
                 </Spinner>
-
-                <!--<EditText-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:background="@drawable/border3"-->
-                    <!--android:textSize="20dp"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:inputType="text"-->
-                    <!--android:padding="2.5dp"-->
-                    <!--android:id="@+id/genre_editText"/>-->
 
             </LinearLayout>
 
@@ -199,18 +224,6 @@
 
                 </Spinner>
 
-                <!--<EditText-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:background="@drawable/border3"-->
-                    <!--android:textSize="20dp"-->
-                    <!--android:inputType="text"-->
-                    <!--android:padding="2.5dp"-->
-                    <!--android:id="@+id/max_note_editText"/>-->
-
             </LinearLayout>
 
             <LinearLayout
@@ -231,35 +244,15 @@
                     android:textSize="20dp"/>
 
                 <Spinner
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/border3"
-                    android:padding="2.5dp"
-                    android:id="@+id/gender_spinner">
-
-                </Spinner>
-
-                <Spinner
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:padding="2.5dp"
+                    android:spinnerMode="dialog"
                     android:id="@+id/change_spinner">
 
                 </Spinner>
-
-                <!--<EditText-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:background="@drawable/border3"-->
-                    <!--android:textSize="20dp"-->
-                    <!--android:padding="2.5dp"-->
-                    <!--android:id="@+id/pitch_change_editText"/>-->
 
             </LinearLayout>
 
@@ -289,7 +282,9 @@
                     android:background="@drawable/border3"
                     android:textSize="20dp"
                     android:inputType="date"
-                    android:padding="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:id="@+id/date_editText"/>
 
             </LinearLayout>
@@ -317,21 +312,10 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:padding="2.5dp"
+                    android:spinnerMode="dialog"
                     android:id="@+id/satisfaction_spinner">
 
                 </Spinner>
-
-                <!--<EditText-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:textColor="@android:color/black"-->
-                    <!--android:textStyle="bold"-->
-                    <!--android:layout_marginRight="10dp"-->
-                    <!--android:background="@drawable/border3"-->
-                    <!--android:textSize="20dp"-->
-                    <!--android:inputType="date"-->
-                    <!--android:padding="2.5dp"-->
-                    <!--android:id="@+id/satisfaction_editText"/>-->
 
             </LinearLayout>
 
@@ -361,7 +345,9 @@
                     android:background="@drawable/border3"
                     android:textStyle="bold"
                     android:inputType="text"
-                    android:padding="2.5dp"
+                    android:paddingBottom="2.5dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
                     android:id="@+id/etc_editText"/>
 
             </LinearLayout>

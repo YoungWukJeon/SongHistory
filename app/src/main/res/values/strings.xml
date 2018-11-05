@@ -7,7 +7,7 @@
     <string-array name="genre_list">
         <item>선택</item>
         <item>Ballad</item>
-        <item>R&amp;B</item>
+        <item>R &amp; B</item>
         <item>Rock Ballad</item>
         <item>Rock</item>
         <item>Musical</item>
@@ -20,12 +20,12 @@
 
     <string-array name="octave_list">
         <item>선택</item>
-        <item>0</item>
-        <item>1</item>
         <item>2</item>
         <item>3</item>
         <item>4</item>
         <item>5</item>
+        <item>6</item>
+        <item>7</item>
     </string-array>
 
     <string-array name="note_list">
@@ -53,6 +53,8 @@
 
     <string-array name="change_list">
         <item>선택</item>
+        <item>-8</item>
+        <item>-7</item>
         <item>-6</item>
         <item>-5</item>
         <item>-4</item>
@@ -66,6 +68,8 @@
         <item>4</item>
         <item>5</item>
         <item>6</item>
+        <item>7</item>
+        <item>8</item>
     </string-array>
 
     <string-array name="satisfaction_list">
@@ -76,5 +80,18 @@
         <item>60</item>
         <item>80</item>
         <item>100</item>
-    </string-array>satisfaction
+    </string-array>
+
+    <string-array name="search_list">
+        <item>제목</item>
+        <item>가수</item>
+        <item>번호</item>
+        <item>성별</item>
+        <item>장르</item>
+        <item>만족도</item>
+        <item>최고음</item>
+        <item>날짜</item>
+        <item>기타</item>
+    </string-array>
+
 </resources>
