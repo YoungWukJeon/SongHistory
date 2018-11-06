@@ -90,6 +90,7 @@
         <item>장르</item>
         <item>만족도</item>
         <item>최고음</item>
+        <item>키변조</item>
         <item>날짜</item>
         <item>기타</item>
     </string-array>

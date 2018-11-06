@@ -210,6 +210,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:padding="2.5dp"
+                    android:spinnerMode="dialog"
                     android:id="@+id/octave_spinner">
 
                 </Spinner>
@@ -220,6 +221,7 @@
                     android:layout_marginRight="10dp"
                     android:background="@drawable/border3"
                     android:padding="2.5dp"
+                    android:spinnerMode="dialog"
                     android:id="@+id/note_spinner">
 
                 </Spinner>
