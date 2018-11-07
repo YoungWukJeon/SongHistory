@@ -15,6 +15,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.test.kani.songhistory.R;
 import com.test.kani.songhistory.activity.MainActivity;
@@ -24,6 +25,7 @@ import com.test.kani.songhistory.utility.FireStoreConnectionPool;
 import com.test.kani.songhistory.utility.HistoryDetailDialog;
 import com.test.kani.songhistory.utility.LoadingDialog;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -331,17 +333,25 @@ public class ViewHistoryFragment extends Fragment
                     }
                     else if ("날짜".equals(searchSpinner.getSelectedItem().toString().trim()))
                     {
-                        String filter1 = trimAll(dateEditText1.getText().toString()).toLowerCase();
+                        String filter1 = (dateEditText1.getText().toString().trim().length() > 0)?
+                                trimAll(dateEditText1.getText().toString()).toLowerCase(): "0000-00-00 00:00";
                         String filter2 = (dateEditText2.getText().toString().trim().length() > 0)?
                                 trimAll(dateEditText2.getText().toString()).toLowerCase():
-                                trimAll(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date())).toLowerCase();
+                                new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date());
 
-//                        if (time >= filterValue1 && time <= filterValue2)
-//                            subHistoryList.add(map);
+                        filter1 = toDateString(filter1, 0);
+                        filter2 = toDateString(filter2, 9999);
+                        String date = (String) map.get("date");
 
-//                        if( trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter1) >= 0 &&
-//                                trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter2) <= 0 )
-//                            subHistoryList.add(map);
+                        if( filter1 == null || filter2 == null )
+                        {
+                            loadingDialog.dismiss();
+                            Toast.makeText(getContext(), "양식에 맞게 다시입력해주세요.", Toast.LENGTH_SHORT).show();
+                            return;
+                        }
+
+                        if( date.compareTo(filter1) >= 0 && date.compareTo(filter2) <= 0  )
+                            subHistoryList.add(map);
 
 //                    FireStoreConnectionPool.getInstance().selectGreaterLessEqual(fireStoreCallbackListener, "history", "id", MainActivity.id,
 //                            "date", filter1, "date", filter2, "date");
@@ -547,6 +557,63 @@ public class ViewHistoryFragment extends Fragment
                 value += 0.5;
 
             return value;
+        }
+    }
+
+    private String toDateString(String str, int defaultValue)
+    {
+        String value;
+        String dates[] = str.split("-");
+
+        int year = defaultValue;
+        int month = defaultValue;
+        int date = defaultValue;
+        int hour = defaultValue;
+        int minute = defaultValue;
+
+        try
+        {
+            if (dates.length > 1)
+            {
+                year = Integer.parseInt(dates[0]);
+
+                if (dates.length > 2)
+                {
+                    month = Integer.parseInt(dates[1]);
+
+                    if (dates.length == 3)
+                    {
+                        date = Integer.parseInt(dates[2].split(" ")[0]);
+
+                        if( dates[2].split(" ").length > 1 )
+                        {
+                            String times[] = dates[2].split(" ")[1].split(":");
+
+                            if (times.length > 1)
+                            {
+                                hour = Integer.parseInt(times[0]);
+
+                                if (times.length == 2)
+                                    minute = Integer.parseInt(times[1]);
+                                else
+                                    return null;
+                            }
+                            else
+                                return null;
+                        }
+                    }
+                    else
+                        return null;
+                }
+            }
+
+            value = String.format("%04d-%02d-%02d %02d:%02d", year, month, date, hour, minute);
+
+            return value;
+        }
+        catch (Exception e)
+        {
+            return null;
         }
     }
 }
