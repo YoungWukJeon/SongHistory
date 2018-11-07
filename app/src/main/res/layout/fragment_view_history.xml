@@ -33,173 +33,188 @@
             android:layout_gravity="center"
             android:id="@+id/search_spinner" />
 
-        <EditText
-            android:id="@+id/search_editText"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:singleLine="true" />
+            android:orientation="vertical">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/gender_spinner"
-            android:visibility="gone"/>
+            <EditText
+                android:id="@+id/search_editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:singleLine="true" />
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/genre_spinner"
-            android:visibility="gone"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/gender_spinner"
+                android:visibility="gone"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/satisfaction_spinner1"
-            android:visibility="gone"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/genre_spinner"
+                android:visibility="gone"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/octave_spinner1"
-            android:visibility="gone" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/satisfaction_spinner1"
+                android:visibility="gone"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/note_spinner1"
-            android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/pitchChange_spinner1"
-            android:visibility="gone"/>
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/octave_spinner1"
+                    android:visibility="gone" />
 
-        <EditText
-            android:id="@+id/date_editText1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:visibility="gone" />
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/note_spinner1"
+                    android:visibility="gone"/>
 
-        <TextView
-            android:id="@+id/splitter_textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" ~ "
-            android:textSize="20dp"
-            android:textColor="@android:color/black"
-            android:textStyle="bold"
-            android:visibility="gone"/>
+            </LinearLayout>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/satisfaction_spinner2"
-            android:visibility="gone"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/pitchChange_spinner1"
+                android:visibility="gone"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/octave_spinner2"
-            android:visibility="gone"/>
+            <EditText
+                android:id="@+id/date_editText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:visibility="gone" />
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.25"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/note_spinner2"
-            android:visibility="gone"/>
+            <TextView
+                android:id="@+id/splitter_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:text=" ~ "
+                android:textSize="20dp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                android:visibility="gone"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:paddingLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:spinnerMode="dialog"
-            android:id="@+id/pitchChange_spinner2"
-            android:visibility="gone"/>
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/satisfaction_spinner2"
+                android:visibility="gone"/>
 
-        <EditText
-            android:id="@+id/date_editText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:textColor="@android:color/black"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:singleLine="true"
-            android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/octave_spinner2"
+                    android:visibility="gone"/>
+
+                <Spinner
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.25"
+                    android:paddingLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:spinnerMode="dialog"
+                    android:id="@+id/note_spinner2"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:spinnerMode="dialog"
+                android:id="@+id/pitchChange_spinner2"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/date_editText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:singleLine="true"
+                android:visibility="gone" />
+
+        </LinearLayout>
 
         <ImageButton
             android:layout_width="32dp"

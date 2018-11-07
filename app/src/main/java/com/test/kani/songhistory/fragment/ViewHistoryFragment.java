@@ -336,9 +336,12 @@ public class ViewHistoryFragment extends Fragment
                                 trimAll(dateEditText2.getText().toString()).toLowerCase():
                                 trimAll(new SimpleDateFormat("yyyy-MM-dd HH:mm").format(new Date())).toLowerCase();
 
-                        if( trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter1) >= 0 &&
-                                trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter2) <= 0 )
-                            subHistoryList.add(map);
+//                        if (time >= filterValue1 && time <= filterValue2)
+//                            subHistoryList.add(map);
+
+//                        if( trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter1) >= 0 &&
+//                                trimAll(((String) map.get("date"))).toLowerCase().compareTo(filter2) <= 0 )
+//                            subHistoryList.add(map);
 
 //                    FireStoreConnectionPool.getInstance().selectGreaterLessEqual(fireStoreCallbackListener, "history", "id", MainActivity.id,
 //                            "date", filter1, "date", filter2, "date");
